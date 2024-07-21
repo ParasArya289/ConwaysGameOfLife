@@ -22,6 +22,7 @@ main {
     will-change:backdground-color scale;
     transform:scale(0.8);
     border-radius:2px;
+    cursor:pointer;
     transition: background-color 0.1s ease,scale 0.1s ease;
   }
   .alive{
