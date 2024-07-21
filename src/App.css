@@ -1,0 +1,42 @@
+body{
+  display:flex;
+  flex-direction:column;
+  width:fit-content;
+  align-item:center;
+  justify-content:center;
+  margin:auto auto;
+}
+main {
+  margin:20px auto;
+  button{
+    margin-bottom:20px;
+  }
+  .game-grid{
+    display:grid;
+    grid-template-columns:repeat(30,15px);
+    grid-template-rows:repeat(30,15px);
+    width:fit-content;
+  }
+  .box{
+    border:1px solid grey;
+    will-change:backdground-color scale;
+    transform:scale(0.8);
+    border-radius:2px;
+    transition: background-color 0.1s ease,scale 0.1s ease;
+  }
+  .alive{
+    background-color:#85ff85;
+    transform:scale(0.9);
+  }
+  .alive[data-animate=true]{
+    animation: deadToAlive 0.1s;
+  }
+  .dead{
+    background-color:white;
+  }
+}
+@keyframes deadToAlive {
+  from {background-color: yellow;}
+  to {background-color: #85ff85;}
+}
+}
